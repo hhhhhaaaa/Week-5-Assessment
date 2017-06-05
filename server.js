@@ -29,6 +29,42 @@ app.get('/', (request, response) => {
   })
 })
 
+app.get('/contacts/:id', (request, response) => {
+  database.getContacts((error, contacts) => {
+    var contactName = null;
+    for (var i = 0; i < contacts.length; i++) {
+      contactName = contacts[i]
+      if (contactName.id === request.params.id) {
+        break;
+      }
+    }
+    if (error) {
+      response.status(500).render('error', {
+        error: error,
+      })
+    } else {
+      response.render('contact', {
+        contacts: contacts,
+        contactName: contactName
+      })
+    }
+  })
+})
+
+app.get('/contacts/new', (request, response) => {
+  database.getContacts((error, contacts) => {
+    if (error) {
+      response.status(500).render('error', {
+        error: error,
+      })
+    } else {
+      response.render('new', {
+        contacts: contacts,
+      })
+    }
+  })
+})
+
 app.use((request, response) => {
   response.status(404).render('not_found')
 })
