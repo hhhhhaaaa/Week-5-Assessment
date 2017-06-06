@@ -4,6 +4,7 @@
   "description": "Build a contacts manager web application with Express and PostgreSQL.",
   "main": "server.js",
   "scripts": {
+    "drop": "psql contacts -c 'DROP TABLE contacts'",
     "import": "psql contacts -f contacts.sql",
     "importfull": "psql contacts -f contacts_full.sql",
     "schema": "psql contacts -f schema.sql",
