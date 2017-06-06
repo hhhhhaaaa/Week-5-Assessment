@@ -3,11 +3,14 @@
   <tr>
     <td>
       <h1>Contacts</h1>
+      <br>
       <div class="contact-list">
-        <% contacts.forEach(function(contact){ %>
+        <% contacts.forEach(function(contacts){ %>
           <div>
-            <%= contact.name %>
+            <%- link_to(contacts.name, "contacts/" + contacts.id) %>
+            <p class="delete">X</p>
           </div>
+          <br>
           <% }) %>
       </div>
     </td>

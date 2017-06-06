@@ -24,6 +24,8 @@ const getContacts = function(callback){
       *
     FROM
       contacts
+    ORDER BY
+      name
   `, [], callback)
 }
 
