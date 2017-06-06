@@ -38,14 +38,14 @@ Complete as many of the specs (checkboxes) as you can.
     <br>Commit messages should summarize what changes are being introduced.
 - [ ] There are at least two commits per day but ideally a lot more.
     <br>It's OK to commit incomplete/draft code. The important thing is to keep a good pace of development and show how your code evolved toward your solution.
-- [ ] Your artifact (final project) uses the [starter code][starter-code-zip].
-- [ ] Your artifact is published to a GitHub repository.
+- [X] Your artifact (final project) uses the [starter code][starter-code-zip].
+- [X] Your artifact is published to a GitHub repository.
 
 #### Pages and Routes
 
 There are three different pages, each with their own route.
 
-- [ ] The list of all contacts can be viewed at the _root_ route, `/`.
+- [X] The list of all contacts can be viewed at the _root_ route, `/`.
 - [ ] Individual contacts can be viewed in more detail at the route `/contacts/:id`, where `:id` is a contact record id from the database.
     <br>For example, visiting the route `/contacts/3` would show the contact with the database id 3.
 - [ ] New contacts can be created by visiting the route `/contacts/new` and submitting the form.
@@ -56,11 +56,11 @@ Update the database schema so that your app can store all the necessary informat
 
 - [ ] Database table `contacts` has fields for contact name, email address, phone number, home address (separate fields for: street, city, state, country, and zip code), birthday, and personal website.
 - [ ] Columns in database table use appropriate data types.
-- [ ] Your app uses `pg`, `pg-promise` or `knex` to communicate with a postgres server.
+- [X] Your app uses `pg`, `pg-promise` or `knex` to communicate with a postgres server.
 
 There are scripts defined to import contact data and load the schema:
-- [ ] `$ npm run schema` loads the schema (`schema.sql`) into the database
-- [ ] `$ npm run import` imports the data in `contacts_full.sql` into the database
+- [X] `$ npm run schema` loads the schema (`schema.sql`) into the database
+- [X] `$ npm run import` imports the data in `contacts_full.sql` into the database
 
 #### User Stories
 
