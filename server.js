@@ -1,10 +1,13 @@
 const express = require('express');
+const helpers = require('express-helpers');
 const bodyParser = require('body-parser');
 const database = require('./database');
 const ejs = require("ejs");
 const fs = require("fs");
 const path = require('path');
+
 const app = express()
+helpers(app);
 
 //View Engine
 app.set('view engine', 'ejs');
@@ -65,10 +68,25 @@ app.get('/contacts/new', (request, response) => {
   })
 })
 
+app.get('/search', (request, response) => {
+  database.getContacts((error, contacts) => {
+    if (error) {
+      response.status(500).render('error', {
+        error: error,
+      })
+    } else {
+      response.render('search', {
+        contacts: contacts,
+      })
+    }
+  })
+})
+
 app.use((request, response) => {
   response.status(404).render('not_found')
 })
 
+//Port
 const port = process.env.PORT || 3000
 app.listen(port, () => {
   console.log(`Listening on http://localhost:${port}...`)

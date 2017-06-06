@@ -2,7 +2,13 @@ html {
   background-color: #50E3C2;
 }
 
+h1 {
+  font-size: 32px;
+}
+
 * {
+  font-family: monospace;
+  font-size: 16px;
   margin: 0;
   padding: 0;
 }
@@ -10,19 +16,36 @@ html {
 .wholepage {
   background-color: white;
   margin: 0 auto;
-  width: 60%;
   min-height: 100vh;
-  height: 90%;
+  width: 50%;
 }
 
 .header {
-  border: 1px solid black;
-  height: 10%;
+  background-color: #4990E2;
+  color: white;
+  height: 7vh;
+  padding: 15px;
   width: 100%;
 }
 
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.delete {
+  color: red;
+  text-align: right;
+}
+
 .page {
-  border: 1px solid black;
-  height: 90%;
+  height: 93vh;
+  padding: 15px;
   width: 100%;
+}
+
+.page a {
+  color: #4990E2;
+  text-decoration: none;
+  float: left;
 }

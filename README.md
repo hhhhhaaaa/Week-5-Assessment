@@ -30,13 +30,13 @@ Complete as many of the specs (checkboxes) as you can.
 
 #### General: Code Quality, Git Flow, Etc.
 
-- [ ] Variables, functions, files, CSS classes, etc. have appropriate and meaningful names.
+- [X] Variables, functions, files, CSS classes, etc. have appropriate and meaningful names.
     <br>Avoid generic, vague or too-short names (e.g. `string`, `stuff`, `x`)
-- [ ] HTML, CSS, and JS files are well formatted with consistent spacing and indentation.
+- [X] HTML, CSS, and JS files are well formatted with consistent spacing and indentation.
     <br>At the very least: tags in HTML and brackets in JavaScript are opened/closed on the same indent level; there are line breaks between style definitions in CSS and between function declarations in JavaScript.
-- [ ] Git commit history shows clear progression through different features, with concise and descriptive commit messages.
+- [X] Git commit history shows clear progression through different features, with concise and descriptive commit messages.
     <br>Commit messages should summarize what changes are being introduced.
-- [ ] There are at least two commits per day but ideally a lot more.
+- [X] There are at least two commits per day but ideally a lot more.
     <br>It's OK to commit incomplete/draft code. The important thing is to keep a good pace of development and show how your code evolved toward your solution.
 - [X] Your artifact (final project) uses the [starter code][starter-code-zip].
 - [X] Your artifact is published to a GitHub repository.
@@ -54,8 +54,8 @@ There are three different pages, each with their own route.
 
 Update the database schema so that your app can store all the necessary information.
 
-- [ ] Database table `contacts` has fields for contact name, email address, phone number, home address (separate fields for: street, city, state, country, and zip code), birthday, and personal website.
-- [ ] Columns in database table use appropriate data types.
+- [X] Database table `contacts` has fields for contact name, email address, phone number, home address (separate fields for: street, city, state, country, and zip code), birthday, and personal website.
+- [X] Columns in database table use appropriate data types.
 - [X] Your app uses `pg`, `pg-promise` or `knex` to communicate with a postgres server.
 
 There are scripts defined to import contact data and load the schema:
@@ -68,8 +68,8 @@ Users of the app have the ability to take the following actions.
 
 ##### Stage One: MVP
 
-- [ ] When a user is viewing the list page (`/`), they see all of their contacts.
-- [ ] On the list page, a user can see a list of all contacts' names sorted alphabetically by first name.
+- [X] When a user is viewing the list page (`/`), they see all of their contacts.
+- [X] On the list page, a user can see a list of all contacts' names sorted alphabetically by first name.
 - [ ] When a user is viewing the list page (`/`), they can click on individual contacts to go to the corresponding detail page for the contact (`/contacts/:id`).
 - [ ] On the contact detail page, a user can see the contact's name, email address, phone number, home address (including: street, city, state, country, and zip code), birthday, and personal website.
 - [ ] When a user is viewing the list page (`/`), they can click on a link to "Add Contact", which takes them to the new contact page (`/contacts/new`).
