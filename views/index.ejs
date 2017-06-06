@@ -1,12 +1,16 @@
 <% include layout/header %>
-  <h1>Contacts</h1>
-
-  <div class="contact-list">
-    <% contacts.forEach(function(contact){ %>
-      <div>
-        <%= contact.name %>
+<table class="page">
+  <tr>
+    <td>
+      <h1>Contacts</h1>
+      <div class="contact-list">
+        <% contacts.forEach(function(contact){ %>
+          <div>
+            <%= contact.name %>
+          </div>
+          <% }) %>
       </div>
-    <% }) %>
-  </div>
-
+    </td>
+  </tr>
+</table>
 <% include layout/footer %>

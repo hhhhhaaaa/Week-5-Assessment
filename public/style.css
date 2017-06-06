@@ -1,5 +1,28 @@
-html, body{
+html {
+  background-color: #50E3C2;
+}
+
+* {
   margin: 0;
   padding: 0;
-  width: 100vw;
+}
+
+.wholepage {
+  background-color: white;
+  margin: 0 auto;
+  width: 60%;
+  min-height: 100vh;
+  height: 90%;
+}
+
+.header {
+  border: 1px solid black;
+  height: 10%;
+  width: 100%;
+}
+
+.page {
+  border: 1px solid black;
+  height: 90%;
+  width: 100%;
 }
