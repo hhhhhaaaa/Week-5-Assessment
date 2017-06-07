@@ -29,6 +29,44 @@ const getContacts = function(callback){
   `, [], callback)
 }
 
+const deleteContact = function(callback, id){
+  query((`
+    DELETE
+    FROM
+      contacts
+    WHERE
+      id
+      =
+  ` + id), [], callback)
+}
+
+const newContact = function(callback, info){
+  query((`
+    INSERT
+    INTO
+      contacts
+      (name, email, phone, street, city, state, country, zip, birthday, website)
+    VALUES
+  ` + info), [], callback)
+}
+
+const searchContacts = function(callback, name){
+  query((`
+    SELECT
+      *
+    FROM
+      contacts
+    ORDER BY
+      name
+    WHERE
+    name
+    =
+  ` + name), [], callback)
+}
+
 module.exports = {
   getContacts,
+  deleteContact,
+  newContact,
+  searchContacts
 }

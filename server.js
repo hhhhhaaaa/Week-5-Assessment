@@ -37,7 +37,7 @@ app.get('/contacts/:id', (request, response) => {
     var contactName = null;
     for (var i = 0; i < contacts.length; i++) {
       contactName = contacts[i]
-      if (contactName.id === request.params.id) {
+      if (contactName.id == request.params.id) {
         break;
       }
     }

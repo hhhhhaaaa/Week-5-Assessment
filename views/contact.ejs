@@ -1,8 +1,61 @@
 <% include layout/header %>
-  <h1>Contacts</h1>
-
-  <div class="contact-list">
-      <%= contactName.name %>
-  </div>
-
+<h1><%= contactName.name %></h1>
+<br>
+<table class="contact">
+<tr>
+  <td class="secondary">
+  name
+</td>
+<td class="primary">
+<%= contactName.name %>
+</td>
+</tr>
+<tr>
+<td class="secondary">
+  email
+</td>
+<td class="primary">
+<%= contactName.email %>
+</td>
+</tr>
+<tr>
+<td class="secondary">
+  phone
+</td>
+<td class="primary">
+<%= contactName.phone %>
+</td>
+</tr>
+<tr>
+<td class="secondary">
+  address
+</td>
+<td class="primary">
+<%= contactName.street %>
+<br>
+<%= contactName.city %>
+<%= contactName.state %>
+<%= contactName.zipcode %>
+<br>
+<%= contactName.country %>
+</td>
+</tr>
+<tr>
+<td class="secondary">
+  birthday
+</td>
+<td class="primary">
+  <br>
+<%= contactName.birthday %>
+</td>
+</tr>
+<tr>
+<td class="secondary">
+  website
+</td>
+<td class="primary">
+<%= contactName.website %>
+</td>
+</tr>
+</table>
 <% include layout/footer %>

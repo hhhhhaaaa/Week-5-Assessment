@@ -88,9 +88,9 @@ Users of the app have the ability to take the following actions.
 
 The user interface matches the designs in the [mockups](#mockups).
 
-- [ ] The entire page content should be constrained by a centered page column.
-- [ ] The site header has a link to the homepage.
-- [ ] The site header has a link to the new contact page (`/contacts/new`).
+- [X] The entire page content should be constrained by a centered page column.
+- [X] The site header has a link to the homepage.
+- [X] The site header has a link to the new contact page (`/contacts/new`).
 - [ ] The site header has a a text input that lets you fuzzy search for contacts.
 - [ ] The color of the header, link text, etc. are exactly the same as the colors in the mockups.
   - Background: `#50E3C2` (teal)
@@ -99,8 +99,8 @@ The user interface matches the designs in the [mockups](#mockups).
   - Secondary text: `#9B9B9B` (light grey)
   - Link text: `#002653` (dark blue)
   - Delete links: `#D0011B` (red)
-- [ ] The font across the whole site is monospace.
-- [ ] The base font-size of the site is 16px.
+- [X] The font across the whole site is monospace.
+- [X] The base font-size of the site is 16px.
 - [ ] The List View (/) looks the same as in the mockup (except with different contact data).
 - [ ] The Detail View (/contacts/:id) looks the same as in the mockup (except with different contact data).
 - [ ] The New Contact View (/contacts/new) looks the same as in the mockup (except with different contact data).
