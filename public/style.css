@@ -4,6 +4,7 @@ html {
 
 h1 {
   font-size: 32px;
+  font-weight: normal;
 }
 
 * {
@@ -13,11 +14,13 @@ h1 {
   padding: 0;
 }
 
-.wholepage {
-  background-color: white;
-  margin: 0 auto;
-  min-height: 100vh;
-  width: 50%;
+.contact {
+  line-height: 2em;
+}
+
+.delete {
+  color: red;
+  text-align: right;
 }
 
 .header {
@@ -33,11 +36,6 @@ h1 {
   text-decoration: none;
 }
 
-.delete {
-  color: red;
-  text-align: right;
-}
-
 .page {
   height: 93vh;
   padding: 15px;
@@ -48,4 +46,19 @@ h1 {
   color: #4990E2;
   text-decoration: none;
   float: left;
+}
+
+.primary {
+  float: right;
+}
+
+.secondary {
+  text-align: left;
+}
+
+.wholepage {
+  background-color: white;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 50%;
 }
