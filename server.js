@@ -19,11 +19,6 @@ app.use(bodyParser.urlencoded({
   extended: false
 }))
 
-// get retriving information
-// put/patch editing
-// post creation
-// delete deltion
-
 //Routes
 app.get('/', (request, response) => {
   database.getContacts((error, contacts) => {
@@ -88,7 +83,7 @@ app.get('/search', (request, response) => {
       })
     }
   })
-})
+})  
 
 //Port
 const port = process.env.PORT || 3000

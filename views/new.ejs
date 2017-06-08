@@ -1,18 +1,47 @@
 <% include layout/header %>
 <h1>Contacts</h1>
 
-<div class="secondary">
-name
-email
-phone
-address
-street
-city
-state
-zip
-country
-birthday
-website
+<div class="secondaryNew">
+  name
 </div>
+<form action="/contacts/:id" method="POST">
+<input type="text" name="contacts.name" placeholder="name" class="newInput">
+</form
+<br>
+<div class="secondaryNew">
+  email
+</div>
+<form action="/contacts/:id" method="POST">
+<input type="text" name="contacts.email" placeholder="email" class="newInput">
+</form>
+<br>
+<div class="secondaryNew">
+  phone
+</div>
+<form action="/contacts/:id" method="POST">
+<input type="text" name="contacts.phone" placeholder="phone" class="newInput">
+</form>
+<br>
+<div class="secondaryNew">
+  address
+</div>
+<form action="/contacts/:id" method="POST">
+<input type="text" name="contacts.address" placeholder="address" class="newInputAddress">
+</form>
+<br>
+<div class="secondaryNew">
+  birthday
+</div>
+<form action="/contacts/:id" method="POST">
+<input type="text" name="contacts.birthday" placeholder="birthday" class="newInput">
+</form>
+<br>
+<div class="secondaryNew">
+  website
+</div>
+<form action="/contacts/:id" method="POST">
+<input type="text" name="contacts.website" placeholder="website" class="newInput">
+</form>
 
+<button type="submit" class="newButton">Create Contact</button>
 <% include layout/footer %>

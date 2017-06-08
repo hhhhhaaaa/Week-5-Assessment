@@ -103,7 +103,7 @@ The user interface matches the designs in the [mockups](#mockups).
 - [X] The base font-size of the site is 16px.
 - [X] The List View (/) looks the same as in the mockup (except with different contact data).
 - [X] The Detail View (/contacts/:id) looks the same as in the mockup (except with different contact data).
-- [ ] The New Contact View (/contacts/new) looks the same as in the mockup (except with different contact data).
+- [X] The New Contact View (/contacts/new) looks the same as in the mockup (except with different contact data).
 - [ ] The Search View (/search) looks the same as in the mockup (except with different contact data).
 
 #### Templating and Includes
