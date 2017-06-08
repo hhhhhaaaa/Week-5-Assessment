@@ -5,19 +5,19 @@ const connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/
 const client = new pg.Client(connectionString)
 client.connect()
 
-const query = function(sql, variables, callback){
-  client.query(sql, variables, function(error, result){
-    if (error){
+const query = function(sql, variables, callback) {
+  client.query(sql, variables, function(error, result) {
+    if (error) {
       console.log('QUERY <- !!ERROR!!')
       console.error(error)
       callback(error)
-    }else{
+    } else {
       callback(error, result.rows)
     }
   })
 }
 
-const getContacts = function(callback){
+const getContacts = function(callback) {
   query(`
     SELECT
       *
@@ -28,7 +28,7 @@ const getContacts = function(callback){
   `, [], callback)
 }
 
-const createContact = function(callback, contactInformation){
+const createContact = function(callback, contactInformation) {
   query((`
     INSERT
     INTO
@@ -38,7 +38,7 @@ const createContact = function(callback, contactInformation){
   ` + contactInformation), [], callback)
 }
 
-const searchContacts = function(callback){
+const searchContacts = function(callback) {
   query(`
     SELECT
       *
@@ -49,7 +49,7 @@ const searchContacts = function(callback){
   `, [], callback)
 }
 
-const deleteContact = function(callback){
+const deleteContact = function(callback) {
   query(`
     SELECT
       *

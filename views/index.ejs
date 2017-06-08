@@ -6,14 +6,14 @@
       <br>
       <div class="contact-list">
         <% contacts.forEach(function(contacts){ %>
-          <div>
-            <%- link_to(contacts.name, "contacts/" + contacts.id) %>
-            <div class="delete">
-              <a href="#" onclick="deleteContact(callback, <%-contacts.id %>);return false;" class="delete">X</a>
-            </div>
+        <div>
+          <%- link_to(contacts.name, "contacts/" + contacts.id) %>
+          <div class="delete">
+            <a href="#" onclick="deleteContact(callback, <%-contacts.id %>);return false;" class="delete">X</a>
           </div>
-          <br>
-          <% }) %>
+        </div>
+        <br>
+        <% }) %>
       </div>
     </td>
   </tr>
