@@ -8,7 +8,9 @@
         <% contacts.forEach(function(contacts){ %>
           <div>
             <%- link_to(contacts.name, "contacts/" + contacts.id) %>
-            <p class="delete">X</p>
+            <div class="delete">
+              <a href="#" onclick="deleteContact(callback, <%-contacts.id %>);return false;" class="delete">X</a>
+            </div>
           </div>
           <br>
           <% }) %>

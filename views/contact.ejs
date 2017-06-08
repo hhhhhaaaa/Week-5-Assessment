@@ -2,65 +2,65 @@
 <h1><%= contactName.name %></h1>
 <br>
 <table class="contact">
-<tr>
-  <td class="secondary">
-  name
-</td>
-<td class="default">
-<%= contactName.name %>
-</td>
-</tr>
-<tr>
-<td class="secondary">
-  email
-</td>
-<td class="default">
-<%= contactName.email %>
-</td>
-</tr>
-<tr>
-<td class="secondary">
-  phone
-</td>
-<td class="default">
-<%= contactName.phone %>
-</td>
-</tr>
-<tr>
-<td class="secondary">
-  address
-</td>
-<td class="default">
-<%= contactName.street %>
-<br>
-<%= contactName.city %>,
-<%= contactName.state %>,
-<%= contactName.zip %>
-<br>
-<%= contactName.country %>
-</td>
-<td class="tertiary">
-  <% var street = contactName.street.split(' ').join('%20') %>
-  <% var country = contactName.country.split(' ').join('%20') %>
-  <iframe width="350" height="250"  src="//www.google.com/maps/embed/v1/place?q=<%= street %>%20<%=contactName.city %>%20<%= contactName.state %>%20<%= contactName.zip %>%20<%= country %>&zoom=17&key=AIzaSyCRhaj7JnYy-fdoFqgmJeZje10iIfeX6lY">
- </iframe>
-</td>
-</tr>
-<tr>
-<td class="secondary">
-  birthday
-</td>
-<td class="default">
-<%= contactName.birthday %>
-</td>
-</tr>
-<tr>
-<td class="secondary">
-  website
-</td>
-<td class="default">
-<%= contactName.website %>
-</td>
-</tr>
+  <tr>
+    <td class="secondary">
+      name
+    </td>
+    <td class="default">
+      <%= contactName.name %>
+    </td>
+  </tr>
+  <tr>
+    <td class="secondary">
+      email
+    </td>
+    <td class="default">
+      <%= contactName.email %>
+    </td>
+  </tr>
+  <tr>
+    <td class="secondary">
+      phone
+    </td>
+    <td class="default">
+      <%= contactName.phone %>
+    </td>
+  </tr>
+  <tr>
+    <td class="secondary">
+      address
+    </td>
+    <td class="default">
+      <%= contactName.street %>
+        <br>
+        <%= contactName.city %>,
+          <%= contactName.state %>,
+            <%= contactName.zip %>
+              <br>
+              <%= contactName.country %>
+    </td>
+    <td class="tertiary">
+      <% var street = contactName.street.split(' ').join('%20') %>
+      <% var country = contactName.country.split(' ').join('%20') %>
+      <iframe width="350" height="250" src="//www.google.com/maps/embed/v1/place?q=<%= street %>%20<%=contactName.city %>%20<%= contactName.state %>%20<%= contactName.zip %>%20<%= country %>&zoom=17&key=AIzaSyCRhaj7JnYy-fdoFqgmJeZje10iIfeX6lY">
+      </iframe>
+    </td>
+  </tr>
+  <tr>
+    <td class="secondary">
+      birthday
+    </td>
+    <td class="default">
+      <%= contactName.birthday %>
+    </td>
+  </tr>
+  <tr>
+    <td class="secondary">
+      website
+    </td>
+    <td class="default">
+      <%= contactName.website %>
+    </td>
+  </tr>
 </table>
 <% include layout/footer %>

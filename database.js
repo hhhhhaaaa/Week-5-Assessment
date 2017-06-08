@@ -1,18 +1,17 @@
 const pg = require('pg')
+//Database Connection
 const connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/contacts'
+//Client Connection
 const client = new pg.Client(connectionString)
 client.connect()
 
 const query = function(sql, variables, callback){
-  console.log('QUERY ->', sql.replace(/[\n\s]+/g, ' '), variables)
-
   client.query(sql, variables, function(error, result){
     if (error){
       console.log('QUERY <- !!ERROR!!')
       console.error(error)
       callback(error)
     }else{
-      console.log('QUERY <-', JSON.stringify(result.rows))
       callback(error, result.rows)
     }
   })
@@ -29,44 +28,41 @@ const getContacts = function(callback){
   `, [], callback)
 }
 
-const deleteContact = function(callback, id){
-  query((`
-    DELETE
-    FROM
-      contacts
-    WHERE
-      id
-      =
-  ` + id), [], callback)
-}
-
-const newContact = function(callback, info){
+const createContact = function(callback, contactInformation){
   query((`
     INSERT
     INTO
       contacts
-      (name, email, phone, street, city, state, country, zip, birthday, website)
+    (name, email, phone, street, city, state, country, zip, birthday, website)
     VALUES
-  ` + info), [], callback)
+  ` + contactInformation), [], callback)
 }
 
-const searchContacts = function(callback, name){
-  query((`
+const searchContacts = function(callback){
+  query(`
     SELECT
       *
     FROM
       contacts
     ORDER BY
       name
-    WHERE
-    name
-    =
-  ` + name), [], callback)
+  `, [], callback)
+}
+
+const deleteContact = function(callback){
+  query(`
+    SELECT
+      *
+    FROM
+      contacts
+    ORDER BY
+      name
+  `, [], callback)
 }
 
 module.exports = {
   getContacts,
-  deleteContact,
-  newContact,
-  searchContacts
+  createContact,
+  searchContacts,
+  deleteContact
 }

@@ -15,7 +15,14 @@ app.set('views', path.join(__dirname, 'views'));
 
 //Static Files
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({
+  extended: false
+}))
+
+// get retriving information
+// put/patch editing
+// post creation
+// delete deltion
 
 //Routes
 app.get('/', (request, response) => {
@@ -26,6 +33,21 @@ app.get('/', (request, response) => {
       })
     } else {
       response.render('index', {
+        contacts: contacts
+      })
+    }
+  })
+})
+
+
+app.get('/contacts/new', (request, response) => {
+  database.getContacts((error, contacts) => {
+    if (error) {
+      response.status(500).render('error', {
+        error: error,
+      })
+    } else {
+      response.render('new', {
         contacts: contacts,
       })
     }
@@ -54,20 +76,6 @@ app.get('/contacts/:id', (request, response) => {
   })
 })
 
-app.get('/contacts/new', (request, response) => {
-  database.getContacts((error, contacts) => {
-    if (error) {
-      response.status(500).render('error', {
-        error: error,
-      })
-    } else {
-      response.render('new', {
-        contacts: contacts,
-      })
-    }
-  })
-})
-
 app.get('/search', (request, response) => {
   database.getContacts((error, contacts) => {
     if (error) {
@@ -80,10 +88,6 @@ app.get('/search', (request, response) => {
       })
     }
   })
-})
-
-app.use((request, response) => {
-  response.status(404).render('not_found')
 })
 
 //Port
