@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Contacts</title>
   <link rel="stylesheet" type="text/css" href="/style.css">
   <script type="text/javascript" src="/script.js"></script>
 </head>
+
 <body>
   <div class="wholepage">
-
     <table class="header">
       <tr>
         <td><a href="/">Home</td>
-        <td><input type="text" class="form" placeholder="Search"</td>
+        <td>
+          <form method="POST" action="/search">
+            <input type="text" name="contactName" class="form" placeholder="Search">
+          </form>
+        </td>
         <td><a href="/contacts/new">New Contact</td>
       </tr>
     </table>

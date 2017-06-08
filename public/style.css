@@ -8,6 +8,7 @@ h1 {
 }
 
 * {
+  color: #4A4A4A;
   font-family: "monaco", monospace;
   font-size: 16px;
   margin: 0;
@@ -22,11 +23,6 @@ h1 {
   float: right;
   text-align: right;
   width: 70%;
-}
-
-.delete {
-  color: red;
-  text-align: right;
 }
 
 .header {
@@ -48,8 +44,8 @@ h1 {
   width: 100%;
 }
 
-.page a {
-  color: #4990E2;
+.page a{
+  color: #002653;
   text-decoration: none;
   float: left;
 }
@@ -69,4 +65,9 @@ h1 {
   margin: 0 auto;
   min-height: 100vh;
   width: 50%;
+}
+
+.delete a{
+  color: #D0011B;
+  float: right;
 }
