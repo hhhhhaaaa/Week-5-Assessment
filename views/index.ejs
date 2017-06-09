@@ -9,7 +9,7 @@
         <div>
           <%- link_to(contacts.name, "contacts/" + contacts.id) %>
           <div class="delete">
-            <form action="/contacts/<%= contacts.id %>?_method=DELETE" method="POST" class="deleteForm">
+            <form action="/contacts/<%= contacts.id %>" method="DELETE" class="deleteForm">
             <a href="javascript:{}" onclick="document.querySelector('.deleteForm').submit(); return false" class="delete">X</a>
             </form>
           </div>

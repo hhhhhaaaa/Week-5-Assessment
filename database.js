@@ -29,13 +29,13 @@ const getContacts = function(callback) {
 }
 
 const deleteContacts = function(id, callback) {
-  query((`
+  query(`
     DELETE
     FROM
       contacts
     WHERE
-      id =
-  ` + id), [], callback)
+      id = $1
+  `, [id], callback)
 }
 
 module.exports = {
