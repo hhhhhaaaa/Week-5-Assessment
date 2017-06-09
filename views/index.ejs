@@ -9,7 +9,9 @@
         <div>
           <%- link_to(contacts.name, "contacts/" + contacts.id) %>
           <div class="delete">
-            <a href="#" onclick="deleteContact(callback, <%-contacts.id %>);return false;" class="delete">X</a>
+            <form action="/contacts/<%= contacts.id %>?_method=DELETE" method="POST" class="deleteForm">
+            <a href="javascript:{}" onclick="document.querySelector('.deleteForm').submit(); return false" class="delete">X</a>
+            </form>
           </div>
         </div>
         <br>

@@ -83,7 +83,19 @@ app.get('/search', (request, response) => {
       })
     }
   })
-})  
+})
+
+//Delete
+app.delete("/blogs/:id", function(request, response) {
+  database.deleteContacts(request.params.id, function(error){
+    if (error) {
+      console.log(error)
+    }
+    else {
+      response.redirect("/")
+    }
+  })
+})
 
 //Port
 const port = process.env.PORT || 3000
