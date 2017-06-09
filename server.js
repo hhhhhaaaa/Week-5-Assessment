@@ -86,13 +86,14 @@ app.get('/search', (request, response) => {
 })
 
 //Delete
-app.delete("/blogs/:id", function(request, response) {
+app.delete("/contacts:id", function(request, response) {
   database.deleteContacts(request.params.id, function(error){
+    console.log("Hello")
     if (error) {
       console.log(error)
     }
     else {
-      response.redirect("/")
+      response.send(request.params.id)
     }
   })
 })
